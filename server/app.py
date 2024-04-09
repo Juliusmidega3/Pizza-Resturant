@@ -11,7 +11,7 @@ db.init_app(app)
 
 @app.route('/')
 def home():
-    return '<h1>Pizza Restaurants API</h1>'
+    return '<h1> Welcome to Pizza Restaurants API</h1>'
 
 
 @app.route('/restaurants', methods=['GET'])
@@ -64,7 +64,7 @@ def delete_restaurant_by_id(id):
         return response_body
     else:
         response_body = {
-            "Error": "Restaurant not found."
+            "Error": "Sorry.....Restaurant not found."
         }
         response = make_response(
             jsonify(response_body),
@@ -102,18 +102,18 @@ def create_restaurant_pizza():
     if not pizza or not restaurant:
         return jsonify({'errors': ['Pizza or Restaurant not found']}), 404
 
-    # Create RestaurantPizza object
+    
     new_restaurant_pizza = RestaurantPizza(
         price=price,
         pizza_id=pizza_id,
         restaurant_id=restaurant_id
     )
 
-    # Add to database and commit
+    
     db.session.add(new_restaurant_pizza)
     db.session.commit()
 
-    # Prepare response data
+    
     pizza_data = {
         'id': pizza.id,
         'name': pizza.name,
@@ -123,7 +123,7 @@ def create_restaurant_pizza():
         jsonify(pizza_data), 200
     )
         
-    # Return success response with pizza data
+    
     return response
 
     

@@ -10,14 +10,14 @@ with app.app_context():
 
    
     restaurants = []
-    restaurants.append(Restaurant(name='Karen Blixen', address='123 Karen Rd'))
-    restaurants.append(Restaurant(name='Artcaffe', address='456 Raphta St'))
-    restaurants.append(Restaurant(name='Burger Haven', address='789 Burger Blvd')),
-    restaurants.append(Restaurant(name='Sushi Station', address='101 Sushi Lane')),
-    restaurants.append(Restaurant(name='Taco Fiesta', address='234 Taco Rd')),
-    restaurants.append(Restaurant(name='BBQ Barn', address='567 BBQ Blvd')), 
-    restaurants.append(Restaurant(name='Curry Kingdom', address='890 Curry St')),
-    restaurants.append(Restaurant(name='Noodle House', address='111 Noodle Ave')),
+    restaurants.append(Restaurant(name='ALLOY', address='25 ALLOY Nairobi'))
+    restaurants.append(Restaurant(name='CJ', address='25 Limuru Road'))
+    restaurants.append(Restaurant(name='Big Knife', address='840 Hurlingham')),
+    restaurants.append(Restaurant(name='seventy seven', address='250 Nairobi')),
+    restaurants.append(Restaurant(name='Taco Bell', address='234 Taco Rd, Nairobi')),
+    restaurants.append(Restaurant(name='BBQ Heaven', address='567 BBQ Blvd')), 
+    restaurants.append(Restaurant(name='Pasta Fiesta', address='111 Pasta Ave, Nakuru')),
+    restaurants.append(Restaurant(name='Dominos', address='123 Moi Avenue')),
     restaurants.append(Restaurant(name='Salad Oasis', address='222 Salad Blvd')),
     restaurants.append(Restaurant(name='Dessert Dream', address='333 Dessert St'))
     db.session.add_all(restaurants)
@@ -25,35 +25,28 @@ with app.app_context():
    
     pizzas = []
     pizzas.append(
-        Pizza(name='Margherita', ingredients='Tomato, Mozzarella, Basil'))
+        Pizza(name='Cheese Lover', ingredients='Tomato, Mozzarella, Basil'))
     pizzas.append(
-        Pizza(name='Pepperoni', ingredients='Tomato, Mozzarella, Pepperoni'))
+        Pizza(name='Spicy Pepperoni', ingredients='Tomato, Mozzarella, Pepperoni'))
     pizzas.append(
-        Pizza(name='Vegetarian', ingredients='Tomato, Mozzarella, Mixed Vegetables'))
+        Pizza(name='Veggie Delight', ingredients='Tomato, Mozzarella, Mixed Vegetables'))
     pizzas.append(
-        Pizza(name='Hawaiian', ingredients='Tomato, Mozzarella, Ham, Pineapple'))
+        Pizza(name='Tropical Hawaiian', ingredients='Tomato, Mozzarella, Ham, Pineapple'))
     pizzas.append(
-        Pizza(name='BBQ Chicken', ingredients='BBQ Sauce, Mozzarella, Chicken, Red Onion'))
+        Pizza(name='BBQ Beef', ingredients='BBQ Sauce, Mozzarella, Chicken, Red Onion'))
     pizzas.append(
-        Pizza(name='Supreme', ingredients='Tomato, Mozzarella, Pepperoni, Mushroom, Bell Pepper, Olive'))
+        Pizza(name='Supreme Deluxe', ingredients='Tomato, Mozzarella, Pepperoni, Mushroom, Bell Pepper, Olive'))
     pizzas.append(
-        Pizza(name='Seafood', ingredients='Tomato, Mozzarella, Shrimp, Calamari, Clam'))
+        Pizza(name='Seafood Extravaganza', ingredients='Tomato, Mozzarella, Shrimp, Calamari, Clam'))
     pizzas.append(
-        Pizza(name='Mushroom Lovers', ingredients='Tomato, Mozzarella, Mushroom Variety'))
+        Pizza(name='Mushroom madness', ingredients='Tomato, Mozzarella, Mushroom Variety'))
     pizzas.append(
-        Pizza(name='Meat Feast', ingredients='Tomato, Mozzarella, Sausage, Bacon, Ham, Pepperoni'))
+        Pizza(name='Carnivore Feast', ingredients='Tomato, Mozzarella, Sausage, Bacon, Ham, Pepperoni'))
     pizzas.append(
-        Pizza(name='Four Cheese', ingredients='Mozzarella, Cheddar, Gorgonzola, Parmesan'))
+        Pizza(name='Four Seasons', ingredients='Mozzarella, Cheddar, Gorgonzola, Parmesan'))
 
     db.session.add_all(pizzas)
 
-
-
-   
-    # restaurant1 = Restaurant(name='Karen Blixen')
-    # restaurant2 = Restaurant(name='Artcaffe')
-    # pizza1 = Pizza(name='Margherita')
-    # pizza2 = Pizza(name='Pepperoni')
 
     restaurant_pizzas = []
     restaurant_pizzas.append(RestaurantPizza(
